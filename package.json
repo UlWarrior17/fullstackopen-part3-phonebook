@@ -7,6 +7,7 @@
     "dev": "node --watch index.js",
     "build:ui": "rm -rf dist && cd fullstackexercises/part2/phonebook  && npm run build && cp -r /dist ../fullstackopen-part3-phonebook",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nsan Eto",
@@ -17,5 +18,11 @@
     "express": "^4.21.2",
     "mongoose": "^8.12.1",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@stylistic/eslint-plugin-js": "^4.4.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
   }
 }
